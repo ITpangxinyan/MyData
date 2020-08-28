@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pxy.mapper.DepartmentMapper">
+
+    <select id="getDepartments" resultType="com.pxy.pojo.Department">
+       select * from base_department;
+    </select>
+
+    <select id="getDepartment" resultType="com.pxy.pojo.Department" parameterType="int">
+       select * from base_department where id = #{id};
+    </select>
+
+</mapper>
